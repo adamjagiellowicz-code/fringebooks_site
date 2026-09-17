@@ -300,11 +300,6 @@ article.post .content ul li {
   max-width: 640px;
 }
 
-/* Push Notes to the right margin, separate from the main nav group */
-nav.primary a.notes-link {
-  margin-left: auto;
-}
-
 
 /* ============================
    Decorative trim — Guimard verdigris + Mackintosh restraint
