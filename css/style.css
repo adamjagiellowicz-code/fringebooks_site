@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+
+:root {
+  --paper: #EDE8DC;
+  --paper-deep: #E2DBC9;
+  --ink: #201E1A;
+  --oxblood: #6B2737;
+  --oxblood-deep: #4E1C29;
+  --rule: #C9BFA5;
+  --max-width: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Newsreader', serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+a { color: var(--oxblood); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--oxblood); outline-offset: 3px; }
+
+/* Masthead */
+header.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+}
+
+header.masthead .mark {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  margin-bottom: 0.6rem;
+}
+
+header.masthead h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+header.masthead .motto {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: 1rem 0 0.4rem;
+}
+
+header.masthead .motto em {
+  font-style: italic;
+  color: var(--oxblood);
+}
+
+header.masthead p.tag {
+  font-style: italic;
+  color: #58524A;
+  margin: 0.75rem 0 1.5rem;
+  font-size: 1.05rem;
+}
+
+nav.primary {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-family: 'Fraunces', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+nav.primary a { color: var(--ink); border-bottom: 1px solid transparent; }
+nav.primary a:hover { color: var(--oxblood); border-color: var(--oxblood); text-decoration: none; }
+
+/* Content column */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* Post list */
+.post-entry {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.post-entry:first-of-type { padding-top: 0; }
+
+.post-entry .kicker {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  margin-bottom: 0.4rem;
+}
+
+.post-entry h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+.post-entry h2 a { color: var(--ink); }
+
+.post-entry .byline {
+  font-size: 0.88rem;
+  color: #6B6459;
+  margin-bottom: 0.7rem;
+}
+
+.post-entry .excerpt { color: #3A362F; }
+
+.post-entry .read-more {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 0.03em;
+}
+
+/* Single post */
+article.post h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+article.post .byline {
+  color: #6B6459;
+  font-size: 0.95rem;
+  margin-bottom: 2.2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+article.post .content p { margin: 0 0 1.3em; }
+article.post .content p:first-of-type::first-letter {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 3.4em;
+  float: left;
+  line-height: 0.85;
+  padding: 0.05em 0.08em 0 0;
+  color: var(--oxblood);
+}
+
+.back-link { display: inline-block; margin-top: 3rem; font-family: 'Fraunces', serif; }
+
+/* About / submissions page */
+.page-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  margin-bottom: 1.6rem;
+}
+
+/* Book catalog / reviews page */
+.book-entry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.6rem;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.book-entry:first-of-type { padding-top: 0; }
+
+.book-cover {
+  width: 120px;
+  height: 176px;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #8A8271;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.book-entry h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.45rem;
+  margin: 0 0 0.2rem;
+}
+
+.book-entry .byline {
+  font-size: 0.88rem;
+  color: #6B6459;
+  margin-bottom: 0.7rem;
+}
+
+.book-entry .excerpt { color: #3A362F; }
+
+@media (max-width: 480px) {
+  .book-entry { grid-template-columns: 84px 1fr; gap: 1rem; }
+  .book-cover { width: 84px; height: 124px; font-size: 0.62rem; }
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6B6459;
+}
+
+footer .mark-sm {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--oxblood);
+  margin-bottom: 0.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+.section-break {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+article.post .content ul {
+  margin: 0 0 1.3em;
+  padding-left: 1.4em;
+}
+article.post .content ul li {
+  margin-bottom: 0.4em;
+}
+
+/* Book product page */
+.book-page .book-author {
+  font-style: italic;
+  color: #666;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+.book-layout {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.book-cover {
+  flex: 0 0 auto;
+}
+.book-purchase {
+  flex: 1 1 260px;
+  min-width: 240px;
+}
+.book-price {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+#lulu-buy-button-print,
+#ebook-buy-button {
+  margin-bottom: 1rem;
+}
+.book-format-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+.book-description, .book-praise {
+  max-width: 640px;
+}
+
+/* Push Notes to the right margin, separate from the main nav group */
+nav.primary a.notes-link {
+  margin-left: auto;
+}
+
+
+/* ============================
+   Decorative trim — Guimard verdigris + Mackintosh restraint
+   ============================ */
+
+:root {
+  --verdigris: #5F8577;
+  --verdigris-deep: #46695D;
+}
+
+/* Thin two-tone structural border — verdigris with a burgundy hairline beneath it */
+.deco-border {
+  height: 4px;
+  width: 100%;
+  background: var(--verdigris);
+  border-bottom: 1px solid var(--oxblood);
+  opacity: 0.85;
+}
+
+header.masthead {
+  border-bottom: 1px solid var(--verdigris);
+}
+
+/* Ornamental flourish — a small stylised rose (Mackintosh) on a curved stem (Guimard),
+   flanked by thin sinuous lines rather than straight rules */
+.flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.4rem 0;
+  gap: 0.5rem;
+}
+.flourish .flourish-line {
+  height: 10px;
+  width: 56px;
+}
+.flourish svg { display: block; }
+
+.section-break {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+footer {
+  border-top: 1px solid var(--verdigris);
+  padding: 0 0 2.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6B6459;
+}
+footer .footer-content {
+  padding: 2rem 1.5rem 0;
+}
