@@ -357,3 +357,11 @@ footer {
 footer .footer-content {
   padding: 2rem 1.5rem 0;
 }
+.book-card { display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.8rem 0; border-bottom: 1px solid var(--rule); }
+.book-cover-placeholder { flex: 0 0 100px; height: 150px; background: #4A453D; display: flex; align-items: center; justify-content: center; color: #9C9890; font-size: 0.7rem; text-align: center; padding: 0.5rem; font-family: 'Fraunces', serif; }
+.book-info { flex: 1; }
+.book-info .book-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.2rem; }
+.book-info .book-author { font-style: italic; color: #58524A; margin-bottom: 0.7rem; }
+.book-info .book-desc { font-size: 0.95rem; margin-bottom: 0.9rem; line-height: 1.6; }
+.book-info .book-status { font-family: 'Fraunces', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oxblood); margin-bottom: 0.6rem; }
+.book-info a.read-link { display: inline-block; font-family: 'Fraunces', serif; font-size: 0.9rem; letter-spacing: 0.03em; color: var(--paper); background: var(--oxblood); padding: 0.5rem 1.1rem; text-decoration: none; }
